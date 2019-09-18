@@ -11,7 +11,7 @@
 
 ## usage
 
-For generating WAV - files, its necessary to define an **Instrument** first. This **Instrument** contains details about the synthesisation process. In the next step one may pass arguments about the content (pitch and rhythm) that shall be synthesised to the previously definied **Instrument**.
+For generating WAV - files, its necessary to define an **Instrument** first. This **Instrument** contains details about the synthesisation process. In the next step one may pass arguments about the content (pitch and rhythm) that shall be synthesised to the previously defined **Instrument**.
 
 ### 1. Defining an instrument.
 
