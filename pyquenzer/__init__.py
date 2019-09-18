@@ -1,0 +1,1 @@
+from .pyquenzer import Instrument

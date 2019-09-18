@@ -1,0 +1,16 @@
+! comment with examination mark
+
+! first uncommented line has to be the name of the scale
+Imaginary perfect slendro
+
+! how many pitches does the scale contain
+5
+
+! pitches written as cents have to be floating point numbers!
+
+240.
+480.
+720.
+960.
+1200.
+
