@@ -5,9 +5,8 @@
 
 ## dependencies
 
-    - music computing system [csound](https://csound.com/)
-
-    - Python library [mu](https://github.com/uummoo/mu)
+- music computing system [csound](https://csound.com/)
+- Python library [mu](https://github.com/uummoo/mu)
 
 
 ## usage
@@ -36,9 +35,8 @@ scale = "scales/example-gamelan.scl"
 
 Make the *samples* dictionary. This dictionary contains the paths of all audio samples that shall be used to synthesise WAV files later. Every entry contains two elements:
 
-    1. an estimated frequency in Hertz
-
-    2. a list containing the paths of all corresponding samples
+1. an estimated frequency in Hertz
+2. a list containing the paths of all corresponding samples
 
 ```python
 samples = {
@@ -56,25 +54,18 @@ scale_decodex = (1, 2, 3, 5, 6)
 
 Initialise an **Instrument** - object. Besides
 
-    * *concert_pitch*
-
-    * *scale*
-
-    * *samples*
-
-    * *scale_decodex*
+* *concert_pitch*
+* *scale*
+* *samples*
+* *scale_decodex*
 
 the **Instrument** class also provides additional optional arguments:
 
-    - *nchannels*: Shall be **1** if the used samples are **mono** and **2** if the used samples are **stereo**
-
-    - *overlap*: how long two following notes of a melody may overlap (in seconds)
-
-    - *volume*: factor to adjust the volume of every sample
-
-    - *release*: pass
-
-    - *reverb-volume*: volume of the reverb channel
+- *nchannels*: Shall be **1** if the used samples are **mono** and **2** if the used samples are **stereo**
+- *overlap*: how long two following notes of a melody may overlap (in seconds)
+- *volume*: factor to adjust the volume of every sample
+- *release*: pass
+- *reverb-volume*: volume of the reverb channel
 
 ```python
 my_instrument = pyquenzer.Instrument(
@@ -86,13 +77,13 @@ my_instrument = pyquenzer.Instrument(
 
 To render WAV files call the *Instrument* object with:
 
-#### 1. The path/name of the resulting WAV file
+1. The path/name of the resulting WAV file
 
-#### 2. The path to the pitch file
+2. The path to the pitch file
 
 Pitch files are text files that describe the pitch of each event. For more details of the needed form study the examples [here](https://github.com/uummoo/pyquenzer/tree/master/example/pitches).
 
-#### 3. The path to the rhythm file
+3. The path to the rhythm file
 
 Rhythm files are text files that describe the duration of each event. For more details of the needed form study the examples [here](https://github.com/uummoo/pyquenzer/tree/master/example/rhythms).
 
