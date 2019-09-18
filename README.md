@@ -27,7 +27,7 @@ Define the [concert pitch](https://en.wikipedia.org/wiki/Concert_pitch) in [Hert
 concert_pitch = 260
 ```
 
-Define the path of the scale that you want to use. The scale has to be written in the popular [scl format](http://huygens-fokker.org/scala/scl_format.html). In [example/scales](https://github.com/uummoo/pyquenzer/tree/master/example/scales) you can already find some scl files. They are taken from [the scl files archive](www.huygens-fokker.org/docs/scales.zip) of the [Huygens-Fokker instituion](http://huygens-fokker.org/).
+Define the path of the scale that you want to use. The scale has to be written in the popular [scl format](http://huygens-fokker.org/scala/scl_format.html). In [example/scales](https://github.com/uummoo/pyquenzer/tree/master/example/scales) you can find some scl files. They are taken from [the scl files archive](www.huygens-fokker.org/docs/scales.zip) of the [Huygens-Fokker instituion](http://huygens-fokker.org/).
 
 ```python
 scale = "scales/example-gamelan.scl"
@@ -46,10 +46,10 @@ samples = {
 }
 ```
 
-Define (optionally) the *scale_decodex* argument. The *scale_decodex* argument has to have as many entries as the size of the used scale. Every entry represent one scale degree. If no *scale_decodex* is specified by the user, every scale degree is represented by its position (the *scale-decodex* of a hepatatonic scale would automatically be defined as (1, 2, 3, 4, 5, 6, 7) and the *scale_decodex* of a pentatonic scale as (1, 2, 3, 4, 5)).
+Define (optionally) the *scale_decodex* argument. The *scale_decodex* argument has to contain as many entries as there are pitches in the used scale. Every entry represents one scale degree. If no *scale_decodex* is specified by the user, every scale degree is represented by its position (the *scale-decodex* of a hepatatonic scale would automatically be defined as (1, 2, 3, 4, 5, 6, 7) and the *scale_decodex* of a pentatonic scale as (1, 2, 3, 4, 5)).
 
 ```python
-scale_decodex = (1, 2, 3, 5, 6)
+scale_decodex = (1, 2, 3, 5, 6)  # notation style similar to the Javanese 'notasi Kepatihan' thats skips the 4
 ```
 
 Initialise an **Instrument** - object. Besides
@@ -62,7 +62,7 @@ Initialise an **Instrument** - object. Besides
 the **Instrument** class also provides additional optional arguments:
 
 - *nchannels*: Shall be **1** if the used samples are **mono** and **2** if the used samples are **stereo**
-- *overlap*: how long two following notes of a melody may overlap (in seconds)
+- *overlap*: determines how long two following notes of a melody are overlapping (in seconds)
 - *volume*: factor to adjust the volume of every sample
 - *release*: indicates the duration of a linear envelope that releases the sound of each sample (in seconds)
 - *reverb-volume*: volume of the reverb channel
@@ -81,11 +81,11 @@ To render WAV files call the *Instrument* object with:
 
 2. The path to the pitch file
 
-Pitch files are text files that describe the pitch of each event. For more details of the needed form study the examples [here](https://github.com/uummoo/pyquenzer/tree/master/example/pitches).
+*Pitch files* are text files that describe the pitch of each event. For more details of the needed form study the examples [here](https://github.com/uummoo/pyquenzer/tree/master/example/pitches).
 
 3. The path to the rhythm file
 
-Rhythm files are text files that describe the duration of each event. For more details of the needed form study the examples [here](https://github.com/uummoo/pyquenzer/tree/master/example/rhythms).
+*Rhythm files* are text files that describe the duration of each event. For more details of the needed form study the examples [here](https://github.com/uummoo/pyquenzer/tree/master/example/rhythms).
 
 ```python
 my_instrument("output/example0", "pitches/example0", "rhythms/example0")
@@ -101,7 +101,7 @@ my_instrument("output/example1", "pitches/example1", 0.25)
 installation:
 -------------
 
-First install all necessary dependencies. Then download *pyquenzer* from git and install it with [pip](https://pypi.org/project/pip/):
+First install all necessary dependencies. Then download *pyquenzer* via git and install it with [pip](https://pypi.org/project/pip/):
 
 ```sh
   $ git clone "https://github.com/uummoo/pyquenzer"
@@ -110,7 +110,7 @@ First install all necessary dependencies. Then download *pyquenzer* from git and
   $ pip3 install .
 ```
 
-To test if everything works well, one may try (inside the *example* - directory):
+To test if everything works well one may try (inside the *example* - directory):
 
 ```sh
   $ python3 example.py
