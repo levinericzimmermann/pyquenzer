@@ -9,7 +9,7 @@
 - Python library [mu](https://github.com/uummoo/mu)
 
 
-## usage
+## usage (see [example](https://github.com/uummoo/pyquenzer/tree/master/example/example.py)
 
 For generating WAV - files, its necessary to define an **Instrument** first. This **Instrument** contains details about the synthesisation process. In the next step one may pass arguments about the content (pitch and rhythm) that shall be synthesised to the previously defined **Instrument**.
 
