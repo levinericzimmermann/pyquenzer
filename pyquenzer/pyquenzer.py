@@ -8,12 +8,12 @@ from mu.mel import shortwriting as sw
 
 
 class Instrument(object):
+    # TODO: add class and method descriptions
     def __init__(
         self,
         concert_pitch: float,
         scale: str,
-        samples: dict,
-        scale_decodex: tuple = None,
+        samples: dict, scale_decodex: tuple = None,
         nchannels: int = 1,
         overlap: float = 0,
         volume: float = 1,
@@ -35,6 +35,8 @@ class Instrument(object):
 
         len_scale_decodex = len(scale_decodex)
 
+        # TODO: find a more elegant solution to avoid the problem
+        # of octave repeating / not-repeating scales
         try:
             assert len_scale - 1 == len_scale_decodex
         except AssertionError:

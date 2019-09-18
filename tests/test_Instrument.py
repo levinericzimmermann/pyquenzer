@@ -52,6 +52,8 @@ class InstrumentTest(unittest.TestCase):
         for name in names:
             os.remove(name)
 
+    # TODO: add find_sample - test
+
 
 if __name__ == "__main__":
     unittest.main()
