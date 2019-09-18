@@ -64,7 +64,7 @@ the **Instrument** class also provides additional optional arguments:
 - *nchannels*: Shall be **1** if the used samples are **mono** and **2** if the used samples are **stereo**
 - *overlap*: how long two following notes of a melody may overlap (in seconds)
 - *volume*: factor to adjust the volume of every sample
-- *release*: pass
+- *release*: indicates the duration of a linear envelope that releases the sound of each sample (in seconds)
 - *reverb-volume*: volume of the reverb channel
 
 ```python
@@ -101,7 +101,7 @@ my_instrument("output/example1", "pitches/example1", 0.25)
 installation:
 -------------
 
-First install all necessary dependencies.
+First install all necessary dependencies. Then download *pyquenzer* from git and install it with [pip](https://pypi.org/project/pip/):
 
 ```sh
   $ git clone "https://github.com/uummoo/pyquenzer"
