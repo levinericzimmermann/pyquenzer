@@ -65,7 +65,7 @@ the **Instrument** class also provides additional optional arguments:
 - *overlap*: determines how long two following notes of a melody are overlapping (in seconds)
 - *volume*: factor to adjust the volume of every sample
 - *release*: indicates the duration of a linear envelope that releases the sound of each sample (in seconds)
-- *reverb-volume*: volume of the reverb channel
+- *reverb_volume*: volume of the reverb channel
 
 ```python
 my_instrument = pyquenzer.Instrument(
