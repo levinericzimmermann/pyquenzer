@@ -7,7 +7,7 @@ setup(
     description='Simple Python Sequenzer.',
     author='Levin Eric Zimmermann',
     author_email='levin-eric.zimmermann@folkwang-uni.de',
-    url='https://github.com/uummoo/pyquenzer',
+    url='https://github.com/levinericzimmermann/pyquenzer',
     packages=['pyquenzer'],
     package_data={},
     include_package_data=True,

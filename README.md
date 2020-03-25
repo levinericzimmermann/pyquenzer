@@ -6,10 +6,10 @@
 ## dependencies
 
 - music computing system [csound](https://csound.com/)
-- Python library [mu](https://github.com/uummoo/mu)
+- Python library [mu](https://github.com/levinericzimmermann/mu)
 
 
-## usage (see [example](https://github.com/uummoo/pyquenzer/tree/master/example/example.py))
+## usage (see [example](https://github.com/levinericzimmermann/pyquenzer/tree/master/example/example.py))
 
 For generating WAV - files, its necessary to define an **Instrument** first. This **Instrument** contains details about the synthetisation process. In the next step one may pass arguments about the content (pitch and rhythm) that shall be synthesized to the previously defined **Instrument**.
 
@@ -27,7 +27,7 @@ Define the [concert pitch](https://en.wikipedia.org/wiki/Concert_pitch) in [Hert
 concert_pitch = 260
 ```
 
-Define the path of the scale that you want to use. The scale has to be written in the popular [scl format](http://huygens-fokker.org/scala/scl_format.html). In [example/scales](https://github.com/uummoo/pyquenzer/tree/master/example/scales) you can find several scl files. They are taken from [the scl files archive](www.huygens-fokker.org/docs/scales.zip) of the [Huygens-Fokker instituion](http://huygens-fokker.org/).
+Define the path of the scale that you want to use. The scale has to be written in the popular [scl format](http://huygens-fokker.org/scala/scl_format.html). In [example/scales](https://github.com/levinericzimmermann/pyquenzer/tree/master/example/scales) you can find several scl files. They are taken from [the scl files archive](www.huygens-fokker.org/docs/scales.zip) of the [Huygens-Fokker instituion](http://huygens-fokker.org/).
 
 ```python
 scale = "scales/example-gamelan.scl"
@@ -81,11 +81,11 @@ To render WAV - files call the *Instrument* object with:
 
 2. The path of the pitch file
 
-*Pitch files* are text files that describe the pitch of each event. For more details about their form study the examples [here](https://github.com/uummoo/pyquenzer/tree/master/example/pitches).
+*Pitch files* are text files that describe the pitch of each event. For more details about their form study the examples [here](https://github.com/levinericzimmermann/pyquenzer/tree/master/example/pitches).
 
 3. The path to the rhythm file
 
-*Rhythm files* are text files that describe the duration of each event. For more details about their form study the examples [here](https://github.com/uummoo/pyquenzer/tree/master/example/rhythms).
+*Rhythm files* are text files that describe the duration of each event. For more details about their form study the examples [here](https://github.com/levinericzimmermann/pyquenzer/tree/master/example/rhythms).
 
 ```python
 my_instrument("output/example0", "pitches/example0", "rhythms/example0")
@@ -104,7 +104,7 @@ installation:
 First install all necessary dependencies. Then download *pyquenzer* via git and install it with [pip](https://pypi.org/project/pip/):
 
 ```sh
-  $ git clone "https://github.com/uummoo/pyquenzer"
+  $ git clone "https://github.com/levinericzimmermann/pyquenzer"
   $ cd pyquenzer/
   $ pip3 install -r requirements.txt
   $ pip3 install .
