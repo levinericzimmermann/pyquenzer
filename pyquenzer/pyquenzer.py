@@ -6,6 +6,8 @@ from mu.sco import old
 from mu.mel import mel
 from mu.mel import shortwriting as sw
 
+from mu.rhy import rhy
+
 
 class Instrument(object):
     # TODO: add class and method descriptions
@@ -159,7 +161,7 @@ class Instrument(object):
 
     def mk_sco(self, cadence: old.Cadence) -> str:
         lines = []
-        abs_start = cadence.delay.convert2absolute()
+        abs_start = rhy.Compound(cadence.delay).convert2absolute()
         for event, start in zip(cadence, abs_start):
             if event.pitch and event.pitch != mel.TheEmptyPitch:
                 duration = float(event.delay) + self.overlap
